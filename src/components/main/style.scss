@@ -1,0 +1,60 @@
+@import '../../styles/vars.scss';
+
+.main {
+    
+    width: 100%;
+    .main-top {
+        .main-top_container  {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h3 {
+                color: $brown;
+                font-style: italic;
+                font-weight: 400;
+                font-family: $playfair-display;
+                font-size: 5rem;
+            }
+            h1 {    
+                @include flex-regular;
+                justify-content: center;
+                gap: 10px;
+                margin-bottom: 24px;
+                span {
+                    color: $brown;
+                    font-family: $playfair-display;
+                    font-size: 5rem;
+                    font-weight: 600;
+                    font-style: italic;
+    
+                }
+                .line {
+                    padding-top: 16px;
+                    display: block;
+                    border-bottom: 2px solid $brown;
+                    width: 55px;
+                    // background-color: $brown;
+                    
+    
+                }
+            }  
+            p {
+                text-align: center;
+                max-width: 406px;
+                font-size: 1rem;
+                font-family: $poppins;
+                font-weight: 400;
+                color: $grey;
+                margin-bottom: 24px;
+            }
+        }
+
+    }
+    .main-middle {
+  
+    }
+    .main-bottom {
+  
+    }
+  }

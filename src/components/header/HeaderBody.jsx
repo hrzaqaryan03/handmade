@@ -15,33 +15,29 @@ const HeaderBody = () => {
   const handleSearchClick = () => {
     setIsSearchActive(!isSerchActive)
   }
+  const handleCloseSearch = () => {
+    setIsSearchActive(false)
+  }
 
   const  handleResize = () => {
     setIsSearchActive(false)
     if(window.innerWidth <= 1024) setIsActiveBurger(true)
     else setIsActiveBurger(false)
-    
+
   }
 
   useEffect(() => {
     window.addEventListener('resize' , handleResize)
-    
-    return () => window.removeEventListener('resize' , handleResize)
+    window.addEventListener('scroll' , handleCloseSearch)
+    return () => {
+      window.removeEventListener('resize' , handleResize)
+      window.removeEventListener('scroll' , handleCloseSearch)
+    }
   },[])
 
-  useEffect(() => {
-    
-    document.addEventListener('click' , function(e) {
-      console.log(ref.current == e.target); 
-      
-      
-    })
+  
 
-    return () => {}
 
-  })
-
- 
   return (
 
 
@@ -74,8 +70,8 @@ const HeaderBody = () => {
           <ul>
             <li className={isSerchActive ?'search active' :  "search"}>
               <div className="search-container">
-                <label htmlFor="prodSearch" className="input-txt">
-                  <input type="text" name="" ref={ref} id="prodSearch" className="input" />
+                <label htmlFor="prodSearch" className="input-txt" >
+                  <input type="text" name="" ref={ref}  id="prodSearch" className="input" />
                   <button className="search-btn" onClick={handleSearchClick}>
                     <span>
                       <BiSearch />
