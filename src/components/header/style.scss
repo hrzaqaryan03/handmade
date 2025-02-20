@@ -1,0 +1,204 @@
+@import '../../styles/vars.scss';
+
+
+.header {
+
+  
+    .header_top {
+        width: 100%;
+        background-color: #56443E;
+        height: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 42px;
+        // border: 1px solid $black;
+        filter: drop-shadow(0px 2px 2px #000000a8);
+
+        .header_top__container {
+
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.625rem;
+                color: $white;
+                span {
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                }
+                .icon {
+                    height: 1.563rem;
+                }
+            }
+        }
+    }
+
+
+
+
+    .header_body {
+
+        .header_body__container {
+            @include flex-regular;
+            position: relative;
+           min-height: 69px;
+            .navigation {
+                width: 100%;
+                max-width: 404px;
+                ul {
+                    @include flex-regular;
+
+                    li {
+
+                        a {
+
+                            font-size: 0.688rem;
+                            font-family: $poppins;
+                            font-weight: 600;
+                            color: #5C5C5C;
+                             transition: text-shadow 150ms ease-in-out;
+                            padding: 4px;
+                            &:hover {
+
+                                text-shadow: 2px 2px 4px #a7a7a7c3;
+                            }
+                        }
+                    }
+                }
+            }
+            .logo {
+                position: absolute;
+                left: 50%;
+                transform   : translateX(-50%);
+                h2 {
+                    font-family:Dancing Script;
+                    font-size: 2rem;
+                    font-weight: 500;
+                    color: #81706A;
+                    transition: text-shadow 150ms ease-in-out;
+                    &:hover {
+
+                        text-shadow: 2px 2px 4px #a7a7a78b;
+                    }
+                }
+            }
+            .controls {
+                width: 100%;
+                max-width: 500px;
+                ul {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    gap: 24px;
+                    li {
+                        
+                        button {
+
+                        
+                            span {
+                                font-size: 0.688rem;
+                                font-family: $poppins;
+                                font-weight: 600;
+                                color: #5C5C5C;
+                                transition: text-shadow 150ms ease-in-out;
+                                &:hover {
+
+                                    text-shadow: 2px 2px 4px #a7a7a7c3;
+                                }
+                            }
+                        }
+                        a {
+                            margin-right: 16px;
+                        }
+                    }
+                    .search {
+                        width: 100%;
+                        .search-container {
+                            display: flex;
+                            justify-content: end;
+                            align-items: center;
+                            .input-txt {
+                                width: 100%;
+                                position: relative;
+                                border-radius: 10px;
+                                max-width: 24px;
+                                overflow: hidden;
+                                transition: all 150ms ease-in-out;
+                                display: flex;
+                                justify-content: end;
+                                align-items: center;
+                                background-color: #fff;
+                                padding: 6px 0 6px 8px;
+                                background-color: transparent;
+                                overflow: hidden;
+                                input {
+                                    width: 100%;
+                                    padding-left: 16px;
+                                    background-color: transparent;
+                                    font-family: $poppins;
+                                    font-size: 0.7rem;
+                                    font-size: 600;
+                                    color: #5C5C5C;
+                                }
+
+                                .search-btn {
+                                    position: absolute;
+                                    top: 6px;
+                                    left: 4px;
+                                   span {
+                                    font-size: 0;
+                                    
+                                   }
+                                    svg {
+                                        font-size: 18px;
+                                        &:hover {
+                                            text-shadow: 2px 2px 2px #000;
+                                        }
+                                    }
+                                }
+                                .close {
+                                    
+                                }
+                            }
+                        }
+                    }
+                    .active {
+                        .search-container {
+
+                            .input-txt {
+                                background-color: #fff;
+                                max-width: 266px;
+                                input {
+                                }
+
+                                .search-btn {
+
+                                   span {
+                                    
+                                       svg {
+                                       }
+                                   }
+                                }
+                              
+                            }
+                        }
+
+                    }
+                    .right {
+                        display: flex;
+                        justify-content: end;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+    
+      
+     
+  
+}
+
+
+

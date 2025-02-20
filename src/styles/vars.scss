@@ -1,0 +1,22 @@
+// font family
+
+$poppins:Poppins;
+$dancing:Dancing Script;
+
+
+// colors
+
+$white:#fff;
+$black:#000;
+
+
+
+// mixins
+
+
+
+@mixin flex-regular {
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+}
